@@ -1,1 +1,23 @@
-alive
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>alive</title>
+    <script>
+        navigator.clipboard.readText()
+        .then(text => {
+            console.log('pasted: ', text);
+            document.getElementById("p").innerHTML = text; 
+        })
+
+        .catch(err => {
+            console.error('failed: ', err);
+        });
+    </script>
+</head>
+<body>
+    <p id="p">alive</p>
+</body>
+</html>
